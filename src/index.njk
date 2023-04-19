@@ -1,0 +1,27 @@
+---js
+{
+  title: "Products",
+  pagination: {
+    data: "collections.product",
+    alias: "items",
+    generatePageOnEmptyData: true,
+    size: 6,
+    serverless: "eleventy.serverless.path.page",
+    before: async function(paginationData, fullData) {
+      if (fullData.eleventy.serverless) {
+        return await this.searchFor(paginationData);
+      }
+
+      return paginationData;
+    }
+  },
+  permalink: {
+    serverless: [
+      "/",
+      "/p/:page/"
+    ]
+  }
+}
+---
+
+{{ items | length }}

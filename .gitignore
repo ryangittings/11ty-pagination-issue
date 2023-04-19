@@ -1,0 +1,5 @@
+netlify/functions/serverless/**
+!netlify/functions/serverless/index.js
+_site
+node_modules
+.cache

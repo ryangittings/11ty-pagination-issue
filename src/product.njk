@@ -1,0 +1,13 @@
+---
+tags: "product"
+pagination:
+  data: "products"
+  size: 1
+  alias: "item"
+  addAllPagesToCollections: true
+permalink: "product/{{ item.id | slugify }}/index.html"
+eleventyComputed:
+  title: "{{ item.title }}"
+---
+
+<h1>{{ item.title }}</h1>
