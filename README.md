@@ -1,14 +1,5 @@
-# 11ty Serverless Fetch
+# 11ty Serverless Pagination Before
 
-So, here's a test case to describe my issue.
+So, I'm trying to filter data via serverless on the fly and make an API call whilst filtering (for geo-locational searching). I've created an example repo to re-create the code.
 
-Two URLs:
-
-- /build/
-- /serverless/
-
-Hit the serverless endpoint, and with every hit you'll see the verbose setting with Fetch log that it's fetching:
-
-`[11ty/eleventy-fetch] Fetching: https://dummyjson.com/products/1`
-
-You can see everytime the serverless function is hit, the URL is fetched from source.
+I am trying to use async within src/index.njk (I know this breaks it), but this is how I've attempted to get this working.
